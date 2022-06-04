@@ -10,7 +10,6 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         # First, sort the list known to provide O (n log n)
         nums.sort()
-        # The last element does not need to account for since it will be compared to the other elements from earlier
         for i in range(len(nums) - 1):
             if nums[i] == nums[i + 1]:
                 return True
