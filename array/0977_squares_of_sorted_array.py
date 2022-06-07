@@ -16,8 +16,8 @@ class Solution:
 
 
 def main():
-    my_solution = Solution().sortedSquares([-4, -1, 0, 3, 10])
-    # my_solution = Solution().findNumbers([555, 901, 482, 1771])
+    # my_solution = Solution().sortedSquares([-4, -1, 0, 3, 10])
+    my_solution = Solution().sortedSquares([-7, -3, 2, 3, 11])
     print(my_solution)
 
 
