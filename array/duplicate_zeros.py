@@ -7,6 +7,7 @@ array in place and do not return anything.
 
 class Solution:
     def duplicateZeros(self, arr: List[int]) -> None:
+        int
         pass
 def main():
     # my_solution = Solution2().sortedSquares([-7, -3, 2, 3, 11])
