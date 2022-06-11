@@ -10,7 +10,7 @@ class Solution:
         int
         pass
 def main():
-    # my_solution = Solution2().sortedSquares([-7, -3, 2, 3, 11])
+    my_solution = Solution2().sortedSquares([-7, -3, 2, 3, 11])
     print(my_solution)
 
 
