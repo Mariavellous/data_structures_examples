@@ -11,14 +11,28 @@ Return k after placing the final result in the first k slots of nums.
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        for i in range(len(nums) - 1):
-            for j in range(len(i + 1, nums) - 1):
+        # for i in range(len(nums) - 1):
+        #     for j in range(len(i + 1, nums) - 1):
+        #         if nums[i] == nums[j]:
+        #             nums[j] = "_"
+        i = 0
+        j = i + 1
+        while i < len(nums):
+            while j < len(nums):
                 if nums[i] == nums[j]:
-                    pass
+                    nums.pop(j)
+                else:
+                    j += 1
+            i += 1
+            j = i + 1
+        return len(nums)
+
+
 
 
 def main():
     my_solution = Solution().removeDuplicates(nums=[1, 1, 2])
+    # my_solution = Solution().removeDuplicates(nums=[0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
     print(my_solution)
 
 
