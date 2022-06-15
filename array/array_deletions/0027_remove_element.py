@@ -12,21 +12,33 @@ from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        i = 0
-        while i < len(nums):
-            if nums[i] == val:
-                nums.pop(i)
-            else:
-                i += 1
-        return len(nums)
+        # Solution 1 : Without changing the len(nums)
+        k = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        print(nums)
+        return k
+
+        # Solution 2: If you are able to change the len(nums) like in Python
+        # i = 0
+        # while i < len(nums):
+        #     if nums[i] == val:
+        #         nums.pop(i)
+        #     else:
+        #         i += 1
+        # return len(nums)
 
 
 def main():
-    # my_solution = Solution().removeElement(nums=[3, 2, 2, 3], val=3)
-    my_solution = Solution().removeElement(nums=[0, 1, 2, 2, 3, 0, 4, 2], val=2)
+    my_solution = Solution().removeElement(nums=[3, 2, 2, 3], val=3)
+    # my_solution = Solution().removeElement(nums=[0, 1, 2, 2, 3, 0, 4, 2], val=2)
     print(my_solution)
 
 # Time Complexity: O(n)
 # Space Complexity: O(1)
+
+
 if __name__ == "__main__":
     main()
