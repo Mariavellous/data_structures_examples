@@ -12,6 +12,10 @@ Return k after placing the final result in the first k slots of nums.
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         # Solution # 1: Better Time Complexity but does not guarantee to return all the right elements in nums
+        # This part handles edge case of len(nums <= 1
+        if len(nums) <= 1:
+            return len(nums)
+
         k = 0
         i = k + 1
         while i < len(nums):
@@ -61,7 +65,9 @@ class Solution:
 
 def main():
     # my_solution = Solution().removeDuplicates(nums=[1, 1, 2])
-    my_solution = Solution().removeDuplicates(nums=[0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
+    # my_solution = Solution().removeDuplicates(nums=[0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
+    # my_solution = Solution().removeDuplicates(nums=[])
+    my_solution = Solution().removeDuplicates(nums=[2])
     print(my_solution)
 
 
