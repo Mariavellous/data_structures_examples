@@ -11,25 +11,39 @@ Return k after placing the final result in the first k slots of nums.
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        # Solution 1: If you are not supposed to change the len(nums)
-        i = 0
-        j = i + 1
-        counter = 0
-        while i < len(nums) and nums[i] != "_":
-            while j < len(nums):
-                if nums[i] == nums[j]:
-                    nums[j] = "_"
-                    new = nums.pop(j)
-                    nums.append(new)
-                    counter += 1
-                else:
-                    j += 1
+        # Solution # 1: Better Time Complexity but does not guarantee to return all the right elements in nums
+        k = 0
+        i = k + 1
+        while i < len(nums):
+            if nums[k] != nums[i]:
+                k += 1
+                nums[k] = nums[i]
             i += 1
-            j = i + 1
-        return len(nums) - counter
+        return k + 1
+        # Time Complexity: O(n)
+        # Space Complexity: O(n)
 
 
-        # Solution 2: If you can change the len(nums)
+        # Solution 2: If you are not supposed to change the len(nums) and keep all the original elements in nums
+        # i = 0
+        # j = i + 1
+        # counter = 0
+        # while i < len(nums) and nums[i] != "_":
+        #     while j < len(nums):
+        #         if nums[i] == nums[j]:
+        #             nums[j] = "_"
+        #             new = nums.pop(j)
+        #             nums.append(new)
+        #             counter += 1
+        #         else:
+        #             j += 1
+        #     i += 1
+        #     j = i + 1
+        # return len(nums) - counter
+        # Time Complexity : O(n * n)
+        # Space Complexity: O(1)
+
+        # Solution 3: If you can change the len(nums)
         # i = 0
         # j = i + 1
         # while i < len(nums):
