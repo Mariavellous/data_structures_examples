@@ -3,8 +3,6 @@ Given an array arr of integers, check if there exists two integers N and M such 
 More formally check if there exists two indices i and j such that: i =! j
 """
 
-# TODO: The edge case below doesn't work with current solution.
-
 from typing import List
 
 
@@ -43,7 +41,6 @@ def main():
     my_solution = Solution().checkIfExist(arr=[7, 1, 14, 11])
     # my_solution = Solution().checkIfExist(arr=[3, 1, 7, 11])
     # my_solution = Solution().checkIfExist(arr=[-10, 12, -20, -8, 15])
-    # TODO: This edge case doesn't work with current solution.
 
 
 
