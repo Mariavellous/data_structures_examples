@@ -18,6 +18,7 @@ class Solution:
             arr[i] = right_max
             right_max = new_max
         return arr
+        # Time Complexity: O(n)
 
         ## My Solution works
         # # Loop from the last element first
@@ -42,6 +43,8 @@ class Solution:
         #     i -= 1
         # # return the list
         # return arr
+
+        # Time Complexity: O(n)
 
 
         ## Trial 1: Time Limit Exceeded O(n^2)
