@@ -9,10 +9,16 @@ Return the number of indices where heights[i] != expected[i]
 
 from typing import List
 
-
+# TODO: Still need to work on this problem
 class Solution:
     def heightChecker(self, heights: List[int]) -> int:
-        pass
+        # this approach didn't work
+        current_heights = heights
+        heights.sort()
+        print(heights)
+        print(current_heights)
+
+
 
 
 def main():
